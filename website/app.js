@@ -37,10 +37,9 @@ function draw(data){
 //Get Data from OpenWeather API:
 function getData (){
 if(zipCode.value == ''){
-    console.log(`no value added`)
+    alert('Please Add a US ZipCode, Can not be empty')
 }
 else{
-    console.log(zipCode.value);
     //USING metric unit to get temp in Celsius: 
     return fetch(`${baseUrl}zip=${zipCode.value}&appid=${apiKey}&units=metric`).then((res)=> res.json())
     .then(resp =>{return resp.main.temp; })
@@ -72,11 +71,5 @@ async function postData (url, data = {}){
 const response = await fetch(url, options);
 const newData = await response.json();
 }
-//Trying method: POST //SET IT DYNAMIC LATER//////////<<<<<<<<<
 
-
-
-
-
-//Display Data Dynamially
 
