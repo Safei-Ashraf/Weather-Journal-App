@@ -7,7 +7,7 @@ const generateBtn = document.getElementById('generate');
 
 //API Info:
 const apiKey = '40ccee278c384d0c3978732f2f4e9cac';
-const baseUrl = 'http://api.openweathermap.org/data/2.5/weather?';
+const baseUrl = 'https://api.openweathermap.org/data/2.5/weather?';
 
 
 //Event Listner on Btn Click:
@@ -68,8 +68,8 @@ async function postData (url, data = {}){
         referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
         body: JSON.stringify(data) // body data type must match "Content-Type" header
      }
-const response = await fetch(url, options);
-const newData = await response.json();
+//const response = await fetch(url, options);
+//const newData = await response.json();
 }
 
 
