@@ -24,7 +24,7 @@ generateBtn.addEventListener('click',()=>{
 //Update UI dynamically:
 function draw(data){
     const dateField = document.querySelector('div#date span');
-    dateField.textContent = data.newDate;
+    dateField.textContent = data.newDate.toLocalString();
     const tempField = document.querySelector('div#temp span');
     tempField.textContent = data.temperature;
     const feelingField = document.querySelector('div#content span');
